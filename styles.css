@@ -1,0 +1,556 @@
+body{
+    background-color: rgb(61, 8, 123);
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0.5vw;
+    width: 73vw;
+    /* height: 80vh; */
+    margin: 2vw 11.7vw;
+    
+}
+
+.clock_overlay,.alarm, .text1, .image{
+    background-color:rgb(255, 255, 255);
+    border-radius: 8px;
+}
+.logo{
+    grid-row: 1/ 2;
+    grid-column: 1/ 2;
+    width: 13vw;
+    height: 10.7vh;
+}
+.clock_text{
+    text-align: left;
+    font: normal normal 600 20px/32px Manrope;
+    letter-spacing: 0px;
+    color: #3D087B;
+    text-transform: uppercase;
+    opacity: 1;
+    position: relative;
+    top: 4.2vh;
+    font-family: 'Dongle', sans-serif;
+    font-size:60px;
+}
+.clock_parts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    top: 2.8vh;
+}
+.time_blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+    height: 12.6vh;
+
+}
+.time_hours, .time_mins, .time_secs{
+    background: url(./Assets/timeline.svg);
+    width: 5.2vw;
+    height: 12.6vh;
+    align-self:center;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+
+}
+.hours_text, .mins_text, .secs_text{
+    font: normal normal normal 23px/28px Barlow;
+    letter-spacing: 0px;
+    color: #5F0089;
+    position: absolute;
+    top: 7vh;
+}
+.hours, .mins, .secs{
+    font: normal normal normal 36px/43px Barlow;
+    letter-spacing: 0px;
+    color: #8A11BF;
+    position: absolute;
+    top: 1.4vh;
+}
+
+.am{
+    background: url(./Assets/AM_svg.svg);
+    width: 5.2vw;
+    height: 12.6vh;
+    border-radius: 2px;
+    text-align: center;
+   
+}
+.am_text{
+    font: normal normal normal 36px/43px Barlow;
+    color: #FFFFFF;
+    position: relative;
+    top: 2.8vh;
+}
+.clock{
+    grid-column: 3/ 4;
+    grid-row: 1/ 2;
+    width: 35vw;
+    height: 18.2vh;
+}
+.clock_overlay{
+    /* grid-column: 3/ 4;
+    grid-row: 1/ 2; */
+    width: 35vw;
+    height: 18.2vh;
+    z-index: 1;
+}
+.clock_back1{
+    width: 27vw;
+    height: 18.2vh;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 0.71;
+    z-index: -1;
+    position: relative;
+    bottom: 16.8vh;
+    left: 7vh;
+}
+.clock_back2{
+    width: 24.6vw;
+    height: 18.2vh;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 0.22;
+    z-index: -2;
+    position: relative;
+    bottom: 33.5vh;
+    left: 4.5vw;
+}
+.alarm{
+    grid-row: 2/ 4;
+    grid-column: 1/ 3;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EDEDED;
+    border-radius: 10px;
+    opacity: 1;
+    width: 36.6vw;
+    height: 50.8vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:baseline;
+    position: relative;
+    bottom: 4.2vh;
+
+}
+#moring, #lunch, #nap, #night{
+    width: 18.2vw;
+    height: 6.3vh;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EDEDED;
+    border-radius: 4px;
+    opacity: 1;
+    position: relative;
+    left: 4.8vw;
+
+}
+.main1{
+    background: transparent url('./Assets/wake_up.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: relative;
+    left: 1.6vw;
+    margin: 15px 0px 0px 0px;
+}
+.main2{
+    background: transparent url('./Assets/lunch_time.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: relative;
+    left: 1.6vw;
+    margin: 0px;
+
+}
+.main3{
+    background: transparent url('./Assets/nap_time.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: relative;
+    left: 1.6vw;
+    margin: 0px;
+
+}
+.main4{
+    background: transparent url('./Assets/nap_time.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: relative;
+    left: 1.6vw;
+    margin: 0px;
+
+}
+.selected_time{
+    font-family: 'Dongle', sans-serif;
+}
+.op1{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EDEDED;
+}
+label{
+    text-align: left;
+    font: normal normal lighter 20px/28px Manrope;
+    letter-spacing: 0px;
+    color: #3D087B;
+    opacity: 1;
+    position:relative;
+    left: 7vh;
+
+}
+.text1{
+    grid-row: 2/ 3;
+    grid-column: 3/ 4;
+    width: 34.8vw;
+    height: 16.5vh;
+    position: relative;
+    top: 3.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    
+}
+.text1_text{
+    position: relative;
+    /* top: 5.6vh; */
+    font: normal normal 900 60px/40px Dongle, sans-serif;
+    color: #8E53F0;
+    box-sizing: border-box;
+
+ 
+}
+.text2{
+    background-color: rgb(106, 65, 154);
+    grid-column: 1/ 3;
+    grid-row: 4/ 5;
+    width: 36.8vw;
+    height: 10.7vh;
+    border-radius: 10px;
+    position: relative;
+    bottom: 4.2vh;
+    
+}
+.text2_text{
+    position: relative;
+    top: 2.8vh;
+    left: 1vw;
+    text-align: center;
+    font: normal normal 900 50px/34px Dongle, sans-serif;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.btn{
+    grid-column: 1/ 2;
+    grid-row: 5/ 6;
+    width: 19.4vw;
+    height: 7vh;
+    font: normal normal 600 24px/38px Manrope;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    position: relative;
+    bottom: 4.2vh;
+}
+button{
+    /* width: 20vw;
+    height: 8vh; */
+    background: transparent linear-gradient(113deg, #6E54EC 0%, #CB52F8 40%, #FC5EFF 81%, #F1A7C5 100%) 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    border-style: none;
+    width: 19.4vw;
+    height: 7vh;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+.btn:active {
+    transform: scale(0.98);
+}
+
+button:hover{
+    content: none;
+    background: transparent linear-gradient(280deg, #6E54EC 0%, #CB52F8 40%, #FC5EFF 81%, #F1A7C5 100%) 0% 0% no-repeat padding-box;
+}
+button:hover span {
+    display: none
+}
+  
+button:hover:before {
+    content: "Party time!"
+}
+.timings{
+    background-color: rgb(106, 65, 154);
+    grid-column: 2/ 3;
+    grid-row: 5/ 6;
+    width: 16vw;
+    height: 15vh;
+    border-radius: 10px;
+    opacity: 0.8;
+    border: 1px solid ;
+    /* background: #FFFFFF 0% 0% no-repeat padding-box; */
+    position: relative;
+    bottom: 4.2vh;
+    
+}
+
+.timings_text{
+    text-align: center;
+    font: normal normal bold 15px/25px Manrope;
+    letter-spacing: 0px;
+    color: #F25CFE;
+}
+
+#image{
+    grid-row: 3/ 6;
+    grid-column: 3/ 4;
+    width: 34.8vw;
+    height: 47.7vh;
+    /* background: url(./Assets/Group\ 5183.svg); */
+    /* background: url(./Assets/Group\ 5183-1.svg) center no-repeat; */
+    /* background-image: "./Assets/Group\ 5183-1.svg";
+    background-repeat: no-repeat; */
+    background-attachment: cover;
+    position: relative;
+    top: 4.2vh;
+}
+.line1{
+    border-left: 2px solid #EDEDED;
+    position: relative;
+    left: 2.7vw;
+}
+
+/************************/
+@media all and (max-width: 880px) {
+    .clock_text{
+        display: none;
+    }
+    .line1{
+        display: none;
+    }
+    .text1_text{
+        font: normal normal 900 40px/40px Dongle, sans-serif;
+        box-sizing: border-box;
+     
+    }
+    .hours_text, .mins_text, .secs_text{
+        display: none;
+    }
+}
+/************************/
+
+@media all and (max-width: 400px) {
+    *{
+        margin: 0;
+    }
+    .container{
+        width: 80px;
+        height: 70vh;
+        margin: 20px 20px 20px 20px;
+        position: relative;
+        top: 50px;
+    }
+    .logo{
+        grid-row: 1/ 2;
+        grid-column: 1/ 3;
+        width: 60vw;
+        height: 10vh;
+    }
+    .clock{
+        grid-column: 1/ 3;
+        grid-row: 2/ 3;
+        width: 80vw;
+        height: 10vh;
+        position: relative;
+        top: 20px;
+    }
+    .clock_overlay{
+        width: 90vw;
+        z-index: 1;
+    }
+    .clock_back1{
+        width: 80vw;
+        position: relative;
+        bottom: 120px;
+        left: 15px;
+    }
+    .clock_back2{
+        width: 50vw;
+        position: relative;
+        bottom: 240px;
+        left: 65px;
+    }
+    .clock_parts{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+        top: 0px;
+        left: 10px;
+    }
+    .clock_text{
+        display: none;
+    }
+    .time_blocks{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 60vw;
+        height: 90px;
+        position:relative;
+        left: 5px;
+        top: 20px;
+    
+    }
+    .time_hours, .time_mins, .time_secs{
+        width: 20vw;
+        height: 90px;
+        align-self:center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    
+    }
+    .hours_text, .mins_text, .secs_text{
+        position: absolute;
+        top: 50px;
+    }
+    .hours, .mins, .secs{
+        position: absolute;
+        top: 20px;
+    }
+    
+    .am{
+        width: 20vw;
+        height: 90px;
+       
+    }
+    .am_text{
+        position: relative;
+        top: 20px;
+    }
+ 
+    .alarm{
+        grid-row: 3/ 4;
+        grid-column: 1/ 3;
+        width: 90vw;
+        height: 363px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        top: 110px;
+      
+    }
+    .line1{
+        position: relative;
+        left: 23px;
+    }
+    #moring, #lunch, #nap, #night{
+        width: 30vw;
+        height: 45px;
+        position: relative;
+        left: 35px;
+    
+    }
+    .wake_text{
+        position: relative;
+        right: 10px;
+    }
+    .main1{
+        width: 80vw;
+        position: relative;
+        left:5px;
+        margin: 15px 0px 0px 0px;
+    }
+    .main2{
+        position: relative;
+        left:5px;
+        margin: 0px 0px 0px 0px;
+    
+    }
+    .main3{
+        position: relative;
+        left:5px;
+        margin: 0px 0px 0px 0px;
+    
+    }
+    .main4{
+        position: relative;
+        left:5px;
+        margin: 0px 0px 0px 0px;
+    
+    }
+    .text2{
+        grid-column: 1/ 3;
+        grid-row: 4/ 5;
+        width: 90vw;
+        height: 15vh;
+        border-radius: 10px;
+        position: relative;
+        top: 120px;
+        
+    }
+    .btn{
+        grid-column: 1/ 3;
+        grid-row: 5/ 6;
+        width: 166px;
+        height: 50px;
+        position: relative;
+        top: 130px;
+    }
+    button{
+        width: 90vw;
+        height: 8vh;
+    }
+    .timings{
+        grid-column: 1/ 3;
+        grid-row: 6/ 7;
+        width: 90vw;
+        height: 16vh;
+        position: relative;
+        top: 140px;
+        
+    }
+  
+    .text1{
+        grid-row: 7/ 8;
+        grid-column: 1/ 3;
+        width: 90vw;
+        height: 16vh;
+        position: relative;
+        top: 140px;
+        
+    }
+    .text1_text{
+        position: relative;
+        top: 10px;
+        bottom: 0px; 
+        text-align: center;
+    }
+    #image{
+        grid-row: 8/ 9;
+        grid-column: 1/ 3;
+        width: 90vw;
+        height: 50vh;
+        /* background: url(./Assets/Group\ 5183-1.svg) center no-repeat; */
+        position: relative;
+        top: 140px;
+    }
+
+}
