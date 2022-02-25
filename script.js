@@ -72,8 +72,6 @@ function btnTimings() {
 
 let btn = document.getElementById("btn");
 
-
-
 btn.addEventListener("click", btnTimings);
 btn.addEventListener("dblclick", function () {
     div21.innerHTML = "";
@@ -82,33 +80,42 @@ btn.addEventListener("dblclick", function () {
     div24.innerHTML = "";
 });
 
-(function settime() {
+function setTime() {
 
-    const hourr = new Date().getHours();
+    var moring = document.getElementById('moring').value;
+    var lunch = document.getElementById("lunch").value;
+    var nap = document.getElementById("nap").value;
+    var night = document.getElementById("night").value;
+    // console.log(moring);
+    // console.log(lunch);
+    // console.log(nap);
+    // console.log(night);
+    const hours = new Date().getHours();
 
 
-    if (hourr >= 0 && hourr < 12) {
+    if (hours == moring) {
         image.style.background = "url(./Assets/Group_5183-1.svg)  center no-repeat";
         text1_text.innerHTML = "Grab your morning coffee and get ready for your day!";
         text2_text.innerHTML = "Good Morning!";
     }
 
-    else if (hourr >= 12 && hourr < 16) {
+    if (hours == lunch) {
         image.style.background = "url(./Assets/Group_5183.svg) center no-repeat";
         text1_text.innerHTML = "Let's Have Some Lunch !!";
         text2_text.innerHTML = "Good Afternoon!";
     }
 
-    else if (hourr >= 16 && hourr < 22) {
+    if (hours == nap) {
         image.style.background = "url(./Assets/Group_5183.svg)  center no-repeat";
         text1_text.innerHTML = "Let's Have Some Tea !!";
         text2_text.innerHTML = "Good Evening!";
     }
 
-    else if (hourr >= 22 && hourr < 24) {
+    if (hours == night) {
         image.style.background = "url(./Assets/Group_5194.svg)  center no-repeat";
         text1_text.innerHTML = "Sweet Dreams !!";
         text2_text.innerHTML = "Good Night !!";
     }
-})();
+};
+
 
