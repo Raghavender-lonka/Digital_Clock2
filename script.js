@@ -34,12 +34,12 @@ function clock() {
     if (hrs == 0) {
         hrs = 12;
     }
-    if (hrs < 10) {
-        hrs = "0" + hrs;
-    }
     if (hrs > 12) {
         hrs = hrs - 12;
         am_pm = "PM";
+    }
+    if (hrs < 10) {
+        hrs = "0" + hrs;
     }
 
     hours.innerHTML = hrs;
