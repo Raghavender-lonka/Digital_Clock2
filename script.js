@@ -31,16 +31,22 @@ function clock() {
     let secs = time.getSeconds();
     let am_pm = "AM";
 
-    if (hrs == 0) {
-        hrs = 12;
-    }
-    if (hrs > 12) {
-        hrs = hrs - 12;
-        am_pm = "PM";
-    }
-    if (hrs < 10) {
-        hrs = "0" + hrs;
-    }
+//     if (hrs == 0) {
+//         hrs = 12;
+//     }
+//     if (hrs > 12) {
+//         hrs = hrs - 12;
+//         am_pm = "PM";
+//     }
+//     if (hrs < 10) {
+//         hrs = "0" + hrs;
+//     }
+//        
+    am_pm = (hrs >= 12) ? "PM" : "AM";
+    hrs = (hrs == 0) ? 12 : ((hrs > 12) ? hrs - 12 : hrs);
+    hrs = (hrs < 10) ? `0${hrs}` : hrs;
+    mins = (mins < 10) ? `0${mins}` : mins;
+    secs = (secs < 10) ? `0${secs}` : secs;
 
     hours.innerHTML = hrs;
     minutes.innerHTML = mins;
